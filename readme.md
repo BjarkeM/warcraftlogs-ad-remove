@@ -9,7 +9,7 @@ Then:
 ### run `npm install .`
 ### run `node index.js`
 
-This will create a `config.json` file you need to fill out with the path to the Warcraftlogs app.asar package.
+This will create a `config.json` file (if not present) you need to fill out with the path to the Warcraftlogs app.asar package.
 The standard value is the path for a system install, so if you do not use this it has to be modified.
 
 After updating the config file, run the script again in the terminal:

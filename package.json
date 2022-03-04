@@ -3,13 +3,23 @@
     "version": "1.0.0",
     "description": "unpack warcraftlogs electron, remove ads, and repack app.asar",
     "main": "index.js",
+    "bin": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "node index.js",
+        "build": "pkg . --target node16-win-x64"
+    },
+    "pkg": {
+        "scripts": [
+            "./index.js"
+        ]
     },
     "author": "",
     "license": "MIT",
     "dependencies": {
         "asar": "^3.1.0"
+    },
+    "devDependencies": {
+        "pkg": "^5.5.2"
     },
     "prettier": {
         "tabWidth": 4,

@@ -2,7 +2,7 @@
 
 
 ## How to use
-1. Make sure you have Nodejs 14+ installed. (https://nodejs.org/en/download/)
+1. Either use the binary (found in the Github releases for this project) or make sure you have the latest NodeJS LTS installed. (https://nodejs.org/en/download/)
 2. Open a terminal in the directory of this file.
 
 Then:

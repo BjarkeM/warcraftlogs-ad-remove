@@ -1,4 +1,4 @@
-warcraftlogs_src/
+*_src/
 node_modules/
-app.asar
+*.asar*
 remove_ads.exe

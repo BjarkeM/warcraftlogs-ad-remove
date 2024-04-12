@@ -6,13 +6,13 @@ exports.ad_remove = function (warcraftlogs_asar_path) {
     const src_path = './warcraftlogs_src';
     asar.extractAll(warcraftlogs_asar_path, src_path);
 
-    fs.readFile(src_path + '/main-view.js', 'utf8', function (err, data) {
+    fs.readFile(src_path + '/js/app.js', 'utf8', function (err, data) {
         if (err) {
             return console.log(err);
         }
-        const result = data.replace(/this._adService.showAd\(\);/g, 'this._adService.hideAd();');
+        const result = data.replace(/[a-zA-Z]+\?.enabledFeatures\?.noAds/g, 'true');
 
-        fs.writeFile(src_path + '/main-view.js', result, 'utf8', function (err) {
+        fs.writeFile(src_path + '/js/app.js', result, 'utf8', function (err) {
             if (err) return console.log(err);
         });
     });
